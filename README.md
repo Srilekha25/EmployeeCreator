@@ -2,7 +2,7 @@
 
 # employee-creator
 
-![Employee Creator](EmployeeApp/Images/Emp_creator_C#.png)
+![Employee Creator](EmployeeApp/Images/Emp_creator_C%23.png)
 
 # Overview
 To create web application which can create list, modify and delete employees.
