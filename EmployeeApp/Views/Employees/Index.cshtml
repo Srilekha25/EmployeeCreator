@@ -1,0 +1,28 @@
+﻿@model IEnumerable<EmployeeApp.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Employee's List</h1>
+
+<div>
+    <p>Please click on 'Edit' to find more details of each employee</p>
+    <button><a asp-action="Create">Add Employee</a></button>
+</div>
+<hr/>
+
+    @foreach (var item in Model)
+    {
+    <div>
+        <p>@Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</p>
+        <p>@Html.DisplayFor(modelItem => item.StartDate) - @Html.DisplayFor(modelItem => item.EndDate)</p>
+        <p>@Html.DisplayFor(modelItem => item.ContractType)</p>
+        <p>@Html.DisplayFor(modelItem => item.Email)</p>
+
+        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+        <hr/>
+</div>
+    }
